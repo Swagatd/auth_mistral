@@ -1,0 +1,9 @@
+datasets
+openai
+pandas
+pyyaml
+mistralai
+anthropic
+numpy
+azure-identity
+python-dotenv
