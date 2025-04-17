@@ -1,0 +1,42 @@
+# Configuration file for the Synth pipeline using Mistral AI models
+
+# Configuration for the strong model
+strong_model:
+  engine: mistralai
+  model: mistral-large-latest
+  seed: 42
+  generation_config:
+    max_tokens: 4096
+    temperature: 0.5
+    top_p: 0.9
+
+# Configuration for the target model
+target_model: 
+  engine: mistralai
+  model: mistral-medium
+  seed: 42
+  generation_config:
+    max_tokens: 4096
+    temperature: 0.5
+    top_p: 0.9
+
+# Configuration for the judge model
+judge_model: 
+  engine: mistralai
+  model: mistral-large-latest
+  seed: 42
+  generation_config:
+    max_tokens: 4096
+    temperature: 0.0
+    top_p: 1.0
+
+# Configuration for the pipeline
+pipeline:
+    n_instructions: 3
+    n_rubrics: 5
+    n_iterations: 5
+    margin_threshold: 0.5
+    output_path: "./output/mistral_results"
+    dataset_path: "./dataset/seed_instructions.json"
+
+
